@@ -1,26 +1,11 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useRoutes } from 'hookrouter';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import { routes } from './routes/routes';
+import { Container } from './containers/Container';
+import { NotFoundPage } from './components/notFoundPage/NotFoundPage';
 
-export default App;
+export const App = () => {
+  const routeResult = useRoutes(routes) || <NotFoundPage />;
+  return <Container>{routeResult}</Container>;
+};
