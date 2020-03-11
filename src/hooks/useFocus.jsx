@@ -55,8 +55,9 @@ export const useFocus = ({
       if (currentFocus === 'content') {
         dispatch(setCurrentItem(cursor));
       }
-
-      navigate(navigateTo(cursor));
+      if (navigateTo) {
+        navigate(navigateTo(cursor));
+      }
     }
   }, [
     currentFocus,
