@@ -1,8 +1,8 @@
 ### Test app for TVs and set-top boxes.  
-Use the arrows **[up]**​, **[down]**​, **[left]**​, **[right]**​. For OK we’ll use **[enter]** and to navigate back, we use
+Use the arrows **[up]**, **[down]**, **[left]**, **[right]**. For OK we’ll use **[enter]** and to navigate back, we use
 the character **[b]** or **[Esc]** (back button also handled).
 
-SPA on React-Redux with ducks and hooks.  
+SPA on React-Redux with ducks and hooks.    
 Configure prettier and eslint.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
