@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
-import { A as button, usePath, navigate } from 'hookrouter';
+import { usePath, navigate } from 'hookrouter';
 import clsx from 'clsx';
 import { IoIosArrowForward as ArrowIcon } from 'react-icons/io';
 

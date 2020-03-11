@@ -56,17 +56,7 @@ export const useFocus = ({
         dispatch(setCurrentItem(cursor));
       }
 
-      switch (typeof navigateTo) {
-        case 'string':
-          navigate(navigateTo);
-          break;
-        case 'function':
-          navigate(navigateTo(cursor));
-          break;
-        default:
-          console.log('ENTER'); // eslint-disable-line
-          break;
-      }
+      navigate(navigateTo(cursor));
     }
   }, [
     currentFocus,
