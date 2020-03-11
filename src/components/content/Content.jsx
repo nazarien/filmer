@@ -70,7 +70,7 @@ export const Content = ({ category, keyboardKey }) => {
         index === cursor && globalFocus === 'content' && activeStyle
       )}
       onClick={() => handleClick(`/${category}/${id}`)}
-      ref={index == 0 ? itemRef : null}
+      ref={index === 0 ? itemRef : null}
     >
       <img
         src={poster_path}

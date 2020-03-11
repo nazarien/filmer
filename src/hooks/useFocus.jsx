@@ -32,11 +32,6 @@ export const useFocus = ({
     ArrowDown: cursorCallbackDown,
   };
 
-  const navigates = {
-    string: navigateTo,
-    function: navigateTo(cursor),
-  };
-
   const moveFocus = useCallback(() => {
     if (nextFocus) {
       dispatch(setFocus(nextFocus));
@@ -61,7 +56,17 @@ export const useFocus = ({
         dispatch(setCurrentItem(cursor));
       }
 
-      navigate(navigates[typeof navigateTo]);
+      switch (typeof navigateTo) {
+        case 'string':
+          navigate(navigateTo);
+          break;
+        case 'function':
+          navigate(navigateTo(cursor));
+          break;
+        default:
+          console.log('ENTER'); // eslint-disable-line
+          break;
+      }
     }
   }, [
     currentFocus,
@@ -71,7 +76,6 @@ export const useFocus = ({
     items.length,
     keyboardKey,
     moveFocus,
-    navigates,
     navigateTo,
   ]);
 
