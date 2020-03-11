@@ -52,6 +52,11 @@ button {
   color: inherit;
   border: none;
   padding: 0;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 html {

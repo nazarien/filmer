@@ -1,0 +1,32 @@
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 50px 50px;
+}
+
+.item {
+  margin-right: 15px;
+  margin-bottom: 15px;
+  transition: transform 0.2s ease;
+  border: 3px solid transparent;
+  border-radius: 5px;
+
+  .poster {
+    display: block;
+    height: 250px;
+    width: 175px;
+    object-fit: cover;
+    padding: 1px;
+
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+
+  &:hover,
+  &.activeStyle {
+    transform: scale(1.1);
+    border-color: #c06131;
+    box-shadow: 2px -6px 40px 1px rgba(0, 0, 0, 0.57);
+  }
+}

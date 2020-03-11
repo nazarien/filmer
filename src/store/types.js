@@ -1,3 +1,6 @@
 export const FILMS_REQUEST = 'FILMS_REQUEST';
 export const FILMS_SUCCESS = 'FILMS_SUCCESS';
 export const FILMS_FAILURE = 'FILMS_FAILURE';
+
+export const SET_FOCUS = 'SET_FOCUS';
+export const SET_CURRENT_ITEM = 'SET_CURRENT_ITEM';

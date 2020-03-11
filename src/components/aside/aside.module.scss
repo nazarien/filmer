@@ -1,0 +1,40 @@
+.aside {
+  padding-left: 50px;
+}
+
+.listItem {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.link {
+  width: 240px;
+  text-transform: capitalize;
+  font-size: 24px;
+  padding: 5px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  color: gray;
+  text-align: start;
+
+  &:hover,
+  &.activeStyle {
+    border-color: #c06131;
+  }
+
+  &.activeCategory {
+    color: #ffffff;
+  }
+}
+
+.icon {
+  opacity: 0;
+  font-size: 1rem;
+  color: #c06131;
+  margin-left: 5px;
+}
+
+.activeStyle > .icon,
+.link:hover > .icon {
+  opacity: 1;
+}
